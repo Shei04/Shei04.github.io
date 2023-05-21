@@ -15,6 +15,11 @@ export default defineConfig({
       component: '@/pages/PageModule/HomePage/index',
       title: '首页',
     },
+    {
+      path: '/geren',
+      component: '@/pages/PageModule/HomePage/index',
+      title: '首页',
+    },
   ],
   // 配置 主题 ：修改 Less 变量
   // 因为umijs 集成了ant.design ui框架 使用到了Less 预编译 这里可以进行修改整体风格主题或者对应的Less变量值
@@ -33,8 +38,9 @@ export default defineConfig({
   //umi的打包路径需要修改，因为gh-pages默认发布build文件下的内容，而umi默认打包目录是dist
   outputPath: 'build',
   //静态资源访问的路径需要改变，如果想本机打开index.html能直接访问，就改成'./'  如果发布到github/gitee上,直接改成发布的网址，要以 / 结尾
-  publicPath:"https://Shei04.github.io/"
-  
+  publicPath:"https://Shei04.github.io/",
+  //在一些场景中，无法做服务端的 html fallback，即让每个路由都输出 index.html 的内容，那么就要做静态化  执行 umi build，会为每个路由输出一个 html 文件
+  // exportStatic: {},
 
   
   //还没弄懂一下内容这里

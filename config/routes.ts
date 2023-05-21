@@ -1,4 +1,4 @@
-// // https://umijs.org/zh-CN/docs/routing
+// https://umijs.org/zh-CN/docs/routing
 //第二种配置路由等相关操作的方式 第一种则使用默认的。umirc.ts 优先级更高
 // const defaultRoutes = [
 //     {
