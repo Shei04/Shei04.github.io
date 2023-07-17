@@ -1,540 +1,560 @@
 * {
-    margin : 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 .bigbox {
-    max-width             : 1200px;
-    min-width             : 1200px;
-    // height             : 800px;
-    // background-color: aqua;
-    margin                : auto;
-    display               : flex;
-    align-items           : center;
-    justify-content       : space-between;
-    margin-bottom         : 10px;
-    position              : relative;
+  overflow-x: hidden;
+  height: calc(100vh - 72px - 35px);
+  > .setSize {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    > .contentbox {
+      max-width: 1200px;
+      min-width: 1200px;
+      max-height: 1200px;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      // margin-top         : 10px;
+      // background-color: rgb(240, 99, 99);
 
-    >.content_left {
-        width           : 350px;
-        height          : calc(650px - 40px);
-        background-color: rgba(255, 255, 255);
-        border-radius   : 10px;
-    }
+      > .content_left {
+        width: 350px;
+        height: 580px;
+        border-radius: 10px;
+        > .content_left_box {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background-color: white;
+        }
+      }
 
-    >.content_right {
-        width          : 800px;
-        height         : calc(650px - 40px);
-        border-radius  : 5px 0px 0px 5px;
-        display        : flex;
-        flex-direction : column;
+      > .content_right {
+        width: 800px;
+        height: 580px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         justify-content: space-between;
 
         .content1 {
+          width: 100%;
 
-            .content_title {
-                height          : 400px;
-                background-color: rgb(54, 139, 214);
-                border-radius   : 8px;
-            }
+          .content_title {
+            width: 100%;
+            height: 360px;
+            background-color: rgb(54, 139, 214);
+            border-radius: 8px;
+          }
         }
 
         .content2 {
-            display            : flex;
-            align-items        : flex-end;
-            justify-content    : space-between;
-            height             : 300px;
-            // background-color: aqua;
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          height: 350px;
 
-            // 天气小组件
-            .content_weather {
-                transform-style   : preserve-3d;
-                user-select       : none;
-                width             : 250px;
-                height            : 200px;
-                border-radius     : 5px;
-                transition        : all 0.5s;
-                position          : relative;
-                // animate.css 加载动画时间  duration持续时间 delay延迟
-                --animate-duration: 1s;
-                // --animate-delay: 0.5s;
-                border-radius     : 8px;
-                color             : rgb(233, 237, 243);
-                transform         : perspective(1000px);
-                z-index           : 3;
+          // 天气小组件
+          .content_weather {
+            transform-style: preserve-3d;
+            user-select: none;
+            width: 250px;
+            height: 200px;
+            border-radius: 5px;
+            transition: all 0.5s;
+            position: relative;
+            // animate.css 加载动画时间  duration持续时间 delay延迟
+            --animate-duration: 1s;
+            // --animate-delay: 0.5s;
+            border-radius: 8px;
+            color: rgb(233, 237, 243);
+            transform: perspective(1000px);
+            z-index: 3;
 
-                .weather_box {
-                    position       : absolute;
-                    bottom         : 0px;
-                    width          : 250px;
-                    height         : 200px;
-                    border-radius  : 8px;
-                    transition     : all 0.3s;
-                    padding        : 10px;
-                    display        : flex;
-                    flex-direction : column;
-                    justify-content: space-evenly;
+            .weather_box {
+              position: absolute;
+              bottom: 0px;
+              width: 250px;
+              height: 200px;
+              border-radius: 8px;
+              transition: all 0.3s;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
 
-                    .weather_box_p1 {
-                        display        : flex;
-                        justify-content: space-between;
+              .weather_box_p1 {
+                display: flex;
+                justify-content: space-between;
 
-                        .p1_box {
-                            .city {
-                                margin-right: 10px;
-                            }
+                .p1_box {
+                  .city {
+                    margin-right: 10px;
+                  }
 
-                            .bg {
-                                margin-left: 10px;
-                            }
+                  .bg {
+                    margin-left: 10px;
+                  }
+                }
+
+                .gengduo {
+                  cursor: pointer;
+                  color: rgba(83, 83, 83, 0.499);
+                  transition: all 0.3s linear;
+
+                  &:hover {
+                    color: white;
+                  }
+                }
+              }
+
+              .weather_time {
+                transition: all 0.5s;
+                height: 20px;
+                color: rgba(255, 255, 255);
+              }
+
+              .weather_box_p2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: calc(200px - 42px);
+                transform-style: preserve-3d;
+                transform: perspective(1000px);
+                transform: translateZ(40px);
+
+                .high_wea {
+                  transform-style: preserve-3d;
+                  font-size: 40px;
+                  cursor: pointer;
+                  transition: all 0.5s;
+                }
+
+                .low_wea {
+                  transform-style: preserve-3d;
+                  font-size: 20px;
+                  cursor: pointer;
+                  transition: all 0.5s;
+                  margin-bottom: 20px;
+                }
+
+                .note {
+                  transition: all 0.5s;
+                  color: #4682b4;
+                }
+              }
+            }
+
+            .weather_box2 {
+              position: absolute;
+              bottom: 0px;
+              width: 400px;
+              height: 400px;
+              border-radius: 8px;
+              transition: all 0.45s;
+              overflow: hidden;
+              // background-color: #ecebeb;
+              box-shadow: 0px 3px 4px 3px #aeb6c478;
+
+              > .content_box {
+                > .cont_body {
+                  height: 200px;
+                  background-color: #ffffff;
+                  padding: 10px;
+
+                  > .cont_body_head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    > .cont_body_head_time {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+
+                      > div:nth-of-type(1) {
+                        margin-right: 7px;
+                        font-weight: bold;
+                        color: #a3a3a3;
+                      }
+
+                      > div:nth-of-type(2) {
+                        font-weight: bold;
+                        color: #a3a3a3;
+                      }
+                    }
+
+                    > .cont_body_city {
+                      font-weight: bold;
+                      color: #a3a3a3;
+                      cursor: pointer;
+
+                      &:hover {
+                        color: black;
+                      }
+                    }
+                  }
+
+                  > .cont_line {
+                    margin-top: 5px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #f4f4f4;
+                  }
+
+                  > .cont_body_content {
+                    > .weetherBox2_content_box {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-evenly;
+                      width: 100%;
+
+                      > .c_b_c_b_left {
+                        width: 70%;
+                        // background-color: #4682b4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        > .c_b_c_b_l_weather {
+                          font-size: 70px;
+                          color: #454545;
                         }
 
-                        .gengduo {
-                            cursor    : pointer;
-                            color     : rgba(83, 83, 83, 0.499);
-                            transition: all 0.3s linear;
+                        > .c_b_c_b_l_w_right {
+                          // display: flex;
+                          // align-items: center;
+                          // flex-direction: column;
+                          // justify-content: flex-end;
+                          > .sheshidu {
+                            color: #b0b0b0f3;
+                            font-size: 30px;
+                            font-weight: 600;
+                          }
+
+                          > .highWeaAndLowWea {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            > .highWeaAndLowWea_left {
+                              display: flex;
+                              align-items: center;
+
+                              > .weaiconfont {
+                                width: 15px;
+                                height: 15px;
+                                line-height: 15px;
+                                font-size: 12px;
+                                text-align: center;
+                                margin-left: 5px;
+                              }
+
+                              > .lowweather {
+                                color: #454545;
+                                font-weight: bold;
+                                margin-right: 10px;
+                              }
+                            }
+
+                            > .highWeaAndLowWea_right {
+                              display: flex;
+                              align-items: center;
+
+                              > .weaiconfont2 {
+                                width: 15px;
+                                height: 15px;
+                                line-height: 15px;
+                                font-size: 12px;
+                                margin-right: 5px;
+                                text-align: center;
+                                font-size: 13px;
+                              }
+
+                              > .highweather {
+                                color: #454545;
+                                font-weight: bold;
+                              }
+                            }
+                          }
+                        }
+                      }
+
+                      > .weatherBoxChange_content2_right {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+                        justify-content: center;
+
+                        > .imgWea {
+                          width: 40px;
+                          height: 40px;
+                          font-size: 30px;
+                          text-align: center;
+                        }
+
+                        > .text {
+                          color: #939393;
+                          font-weight: bold;
+                          text-align: center;
+                        }
+                      }
+                    }
+
+                    > .weetherBox2_content_box2 {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      transition: all 0.5s;
+                      cursor: pointer;
+
+                      > .boxShowData {
+                        width: 360px;
+                        height: 35px;
+                        border-radius: 20px;
+                        padding: 0px 15px 0px 15px;
+                        background-color: #f6f6f6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #454545;
+                        font-weight: bold;
+                      }
+
+                      &:hover {
+                        transform: scale(1.04);
+                      }
+                    }
+                  }
+                }
+
+                > .box_show {
+                  width: 100%;
+
+                  > .box_show_content {
+                    width: 100%;
+                    height: 200px;
+
+                    > .box_show_content_box {
+                      height: 180px;
+                      // background-color   : #f6f6f6a9;
+                      background-color: white;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: space-evenly;
+
+                      > .icon_weather {
+                        width: 100%;
+                        height: 100%;
+
+                        > .icon_weather_content {
+                          > .box_top {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+
+                            > .contbox {
+                              margin-top: 10px;
+                              cursor: pointer;
+                              transition: all 0.3s;
+
+                              &:hover {
+                                transform: scale(1.1);
+                                transform: scale(1);
+                              }
+
+                              > .weaiconfont {
+                                width: 35px;
+                                height: 35px;
+                                text-align: center;
+                                line-height: 35px;
+                                font-size: 28px;
+                              }
+
+                              > .describe {
+                                font-size: 13px;
+                                color: #a5a5a5;
+                                text-align: center;
+                              }
+
+                              > .data {
+                                text-align: center;
+                                font-size: 14px;
+                                color: #454545;
+                                font-weight: bold;
+                              }
+                            }
+                          }
+
+                          > .box_bottom {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+
+                            > .contbox {
+                              cursor: pointer;
+                              transition: all 0.3s;
+
+                              &:hover {
+                                transform: scale(1.1);
+                              }
+
+                              > .weaiconfont {
+                                width: 35px;
+                                height: 35px;
+                                text-align: center;
+                                line-height: 35px;
+                                font-size: 28px;
+                              }
+
+                              > .describe {
+                                font-size: 13px;
+                                text-align: center;
+                                color: #a5a5a5;
+                              }
+
+                              > .data {
+                                font-size: 14px;
+                                text-align: center;
+                                color: #454545;
+                                font-weight: bold;
+                              }
+                            }
+                          }
+                        }
+                      }
+
+                      > .d_weather {
+                        width: 100%;
+                        height: 100%;
+
+                        > .d_weather_content {
+                          height: 100%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-evenly;
+                          padding: 5px 0px 5px 0px;
+
+                          > .future_weather {
+                            border-radius: 8px;
+                            padding: 8px 0px 8px 0px;
+                            width: 55px;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            cursor: pointer;
+                            // transition     : all 0.5s;
+                            font-size: 13px;
+                            color: #454545;
+                            overflow: hidden;
 
                             &:hover {
-                                color: white;
+                              background-color: rgb(89, 168, 228);
                             }
-                        }
 
+                            > div {
+                              text-align: center;
+                            }
+                          }
+                        }
+                      }
+
+                      > .h_weather {
+                        width: 100%;
+                        height: 100%;
+
+                        > .h_weather_content {
+                          height: 100%;
+                          width: 100%;
+                          color: #454545;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        }
+                      }
                     }
 
+                    > .box_show_click {
+                      width: 100%;
+                      height: 20px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      // background-color: #f6f6f6;
+                      background-color: white;
 
-                    .weather_time {
+                      > div {
+                        cursor: pointer;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
                         transition: all 0.5s;
-                        height    : 20px;
-                        color     : rgba(255, 255, 255);
+                        background-color: rgba(165, 109, 109, 0.368);
+
+                        &:nth-of-type(2) {
+                          margin-left: 10px;
+                          margin-right: 10px;
+                        }
+
+                        &:hover {
+                          background-color: rgb(227, 49, 49);
+                        }
+                      }
                     }
-
-                    .weather_box_p2 {
-                        display        : flex;
-                        align-items    : center;
-                        justify-content: center;
-                        flex-direction : column;
-                        height         : calc(200px - 42px);
-                        transform-style: preserve-3d;
-                        transform      : perspective(1000px);
-                        transform      : translateZ(40px);
-
-                        .high_wea {
-                            transform-style: preserve-3d;
-                            font-size      : 40px;
-                            cursor         : pointer;
-                            transition     : all 0.5s;
-                        }
-
-                        .low_wea {
-                            transform-style: preserve-3d;
-                            font-size      : 20px;
-                            cursor         : pointer;
-                            transition     : all 0.5s;
-                            margin-bottom  : 20px;
-                        }
-
-                        .note {
-                            transition: all 0.5s;
-                            color     : #4682b4;
-                        }
-
-                    }
+                  }
                 }
-
-                .weather_box2 {
-                    position           : absolute;
-                    bottom             : 0px;
-                    width              : 400px;
-                    height             : 400px;
-                    border-radius      : 8px;
-                    transition         : all 0.45s;
-                    overflow           : hidden;
-                    // background-color: #ecebeb;
-                    box-shadow         : 0px 3px 4px 3px #aeb6c478;
-
-                    >.content_box {
-                        >.cont_body {
-                            height          : 200px;
-                            background-color: #ffffff;
-                            padding         : 10px;
-
-                            >.cont_body_head {
-                                display        : flex;
-                                align-items    : center;
-                                justify-content: space-between;
-
-                                >.cont_body_head_time {
-                                    display        : flex;
-                                    align-items    : center;
-                                    justify-content: space-between;
-
-                                    >div:nth-of-type(1) {
-                                        margin-right: 7px;
-                                        font-weight : bold;
-                                        color       : #a3a3a3;
-                                    }
-
-                                    >div:nth-of-type(2) {
-                                        font-weight: bold;
-                                        color      : #a3a3a3;
-                                    }
-                                }
-
-                                >.cont_body_city {
-                                    font-weight: bold;
-                                    color      : #a3a3a3;
-                                    cursor     : pointer;
-
-                                    &:hover {
-                                        color: black;
-                                    }
-                                }
-                            }
-
-                            >.cont_line {
-                                margin-top      : 5px;
-                                width           : 100%;
-                                height          : 2px;
-                                background-color: #f4f4f4;
-                            }
-
-                            >.cont_body_content {
-                                >.weetherBox2_content_box {
-                                    display        : flex;
-                                    align-items    : center;
-                                    justify-content: space-evenly;
-                                    width          : 100%;
-
-                                    >.c_b_c_b_left {
-                                        width              : 70%;
-                                        // background-color: #4682b4;
-                                        display            : flex;
-                                        align-items        : center;
-                                        justify-content    : flex-start;
-
-                                        >.c_b_c_b_l_weather {
-                                            font-size: 70px;
-                                            color    : #454545;
-
-                                        }
-
-                                        >.c_b_c_b_l_w_right {
-
-                                            // display: flex;
-                                            // align-items: center;
-                                            // flex-direction: column;
-                                            // justify-content: flex-end;
-                                            >.sheshidu {
-                                                color      : #b0b0b0f3;
-                                                font-size  : 30px;
-                                                font-weight: 600;
-                                            }
-
-                                            >.highWeaAndLowWea {
-                                                display        : flex;
-                                                align-items    : center;
-                                                justify-content: space-between;
-
-                                                >.highWeaAndLowWea_left {
-                                                    display    : flex;
-                                                    align-items: center;
-
-                                                    >.weaiconfont {
-                                                        width      : 15px;
-                                                        height     : 15px;
-                                                        line-height: 15px;
-                                                        font-size  : 12px;
-                                                        text-align : center;
-                                                        margin-left: 5px;
-                                                    }
-
-                                                    >.lowweather {
-                                                        color       : #454545;
-                                                        font-weight : bold;
-                                                        margin-right: 10px;
-                                                    }
-                                                }
-
-                                                >.highWeaAndLowWea_right {
-                                                    display    : flex;
-                                                    align-items: center;
-
-                                                    >.weaiconfont2 {
-                                                        width       : 15px;
-                                                        height      : 15px;
-                                                        line-height : 15px;
-                                                        font-size   : 12px;
-                                                        margin-right: 5px;
-                                                        text-align  : center;
-                                                        font-size   : 13px;
-
-                                                    }
-
-                                                    >.highweather {
-
-                                                        color      : #454545;
-                                                        font-weight: bold;
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                    }
-
-                                    >.weatherBoxChange_content2_right {
-                                        display        : flex;
-                                        flex-direction : column;
-                                        align-content  : center;
-                                        justify-content: center;
-
-                                        >.imgWea {
-                                            width     : 40px;
-                                            height    : 40px;
-                                            font-size : 30px;
-                                            text-align: center;
-                                        }
-
-                                        >.text {
-                                            color      : #939393;
-                                            font-weight: bold;
-                                            text-align : center;
-                                        }
-                                    }
-                                }
-
-                                >.weetherBox2_content_box2 {
-                                    display        : flex;
-                                    align-items    : center;
-                                    justify-content: center;
-                                    transition: all 0.5s;
-                                    cursor: pointer;
-                                    >.boxShowData {
-                                        width           : 360px;
-                                        height          : 35px;
-                                        border-radius   : 20px;
-                                        padding         : 0px 15px 0px 15px;
-                                        background-color: #f6f6f6;
-                                        display         : flex;
-                                        align-items     : center;
-                                        justify-content : space-between;
-                                        color           : #454545;
-                                        font-weight     : bold;
-                                    }
-                                    &:hover{
-                                        transform: scale(1.04);
-                                    }
-                                }
-                            }
-                        }
-
-                        >.box_show {
-                            width: 100%;
-
-                            >.box_show_content {
-                                width : 100%;
-                                height: 200px;
-
-                                >.box_show_content_box {
-                                    height                : 180px;
-                                    // background-color   : #f6f6f6a9;
-                                    background-color      : white;
-                                    display               : flex;
-                                    flex-direction        : column;
-                                    align-items           : center;
-                                    justify-content       : space-evenly;
-
-                                    >.icon_weather {
-                                        width : 100%;
-                                        
-
-                                        >.box_top {
-                                            width          : 100%;
-                                            display        : flex;
-                                            align-items    : center;
-                                            justify-content: space-evenly;
-
-                                            >.contbox {
-                                                margin-top: 10px;
-                                                cursor: pointer;
-                                                transition: all 0.3s;
-                                                &:hover{
-                                                    transform: scale(1.1);
-                                                }
-                                                >.weaiconfont {
-                                                    width      : 35px;
-                                                    height     : 35px;
-                                                    text-align : center;
-                                                    line-height: 35px;
-                                                    font-size  : 28px;
-                                                }
-
-                                                >.describe {
-                                                    font-size : 13px;
-                                                    color     : #a5a5a5;
-                                                    text-align: center;
-                                                }
-
-                                                >.data {
-                                                    text-align : center;
-                                                    font-size  : 14px;
-                                                    color      : #454545;
-                                                    font-weight: bold;
-                                                }
-                                            }
-                                        }
-
-                                        >.box_bottom {
-                                            width          : 100%;
-                                            display        : flex;
-                                            align-items    : center;
-                                            justify-content: space-evenly;
-
-                                            >.contbox {
-                                                cursor: pointer;
-                                                transition: all 0.3s;
-                                                &:hover{
-                                                    transform: scale(1.1);
-                                                }
-                                                >.weaiconfont {
-                                                    width      : 35px;
-                                                    height     : 35px;
-                                                    text-align : center;
-                                                    line-height: 35px;
-                                                    font-size  : 28px;
-                                                }
-
-                                                >.describe {
-                                                    font-size : 13px;
-                                                    text-align: center;
-                                                    color     : #a5a5a5;
-                                                }
-
-                                                >.data {
-                                                    font-size  : 14px;
-                                                    text-align : center;
-                                                    color      : #454545;
-                                                    font-weight: bold;
-                                                }
-                                            }
-                                        }
-                                    }
-
-
-
-                                    >.h_weather {
-                                        width : 100%;
-                                        height: 200px;
-
-                                        >.h_weather_content {
-                                            width          : 100%;
-                                            height         : 100%;
-                                            display        : flex;
-                                            align-items    : center;
-                                            justify-content: space-evenly;
-                                            padding        : 5px 0px 5px 0px;
-
-                                            >.future_weather {
-                                                border-radius  : 8px;
-                                                padding        : 8px 0px 8px 0px;
-                                                width          : 55px;
-                                                height         : 100%;
-                                                display        : flex;
-                                                flex-direction : column;
-                                                align-items    : center;
-                                                justify-content: space-evenly;
-                                                cursor         : pointer;
-                                                transition     : all 0.5s;
-                                                font-size      : 13px;
-                                                color          : #454545;
-                                                overflow       : hidden;
-
-                                                &:hover {
-                                                    background-color: rgb(89, 168, 228);
-                                                }
-
-                                                >div {
-                                                    text-align: center;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-
-                                >.box_show_click {
-                                    width              : 100%;
-                                    height             : 20px;
-                                    display            : flex;
-                                    align-items        : center;
-                                    justify-content    : center;
-                                    // background-color: #f6f6f6;
-                                    background-color   : white;
-
-                                    >div {
-                                        cursor          : pointer;
-                                        width           : 10px;
-                                        height          : 10px;
-                                        border-radius   : 50%;
-                                        transition      : all 0.5s;
-                                        background-color: rgba(165, 109, 109, 0.368);
-
-                                        &:nth-of-type(2) {
-                                            margin-left : 10px;
-                                            margin-right: 10px;
-                                        }
-
-                                        &:hover {
-                                            background-color: rgb(227, 49, 49);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+              }
             }
+          }
 
+          // 时间小组件
+          .content_time {
+            width: 250px;
+            height: 200px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255);
+            // background-color: aqua;
+            --animate-duration: 2s;
+            z-index: 1;
+          }
 
-            // 时间小组件
-            .content_time {
-                width              : 250px;
-                height             : 200px;
-                border-radius      : 5px;
-                background-color   : rgba(255, 255, 255);
-                // background-color: aqua;
-                --animate-duration : 2s;
-                z-index            : 1;
-            }
-
-            // 新闻小组件
-            .content_text {
-                width              : 250px;
-                height             : 200px;
-                border-radius      : 5px;
-                background-color   : rgba(255, 255, 255);
-                // background-color: aqua;
-                --animate-duration : 2s;
-                z-index            : 1;
-            }
-
+          // 新闻小组件
+          .content_text {
+            width: 250px;
+            height: 200px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255);
+            // background-color: aqua;
+            --animate-duration: 2s;
+            z-index: 1;
+          }
         }
+      }
     }
-}
-
-.beian {
-    height          : calc(100vh - 95vh);
-    width           : 100%;
-    background-color: white;
+  }
 }
 
 //动画
 
 //遮罩层  用于关闭天气卡片
 .zhezhaoceng {
-    position           : absolute;
-    // background-color: rgba(188, 188, 188, 0.267);
-    top                : 4.5rem;
-    left               : 0px;
-    width              : 100vw;
-    height             : calc(100% - 4.5rem);
-    z-index            : 2;
+  position: absolute;
+  background-color: rgba(188, 188, 188, 0.267);
+  top: 72px;
+  left: 0px;
+  width: 100%;
+  // height             : calc(100% - 72px - 35px);
+  height: calc(100vh - 72px);
+  z-index: 2;
 }

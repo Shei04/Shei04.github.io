@@ -12,6 +12,11 @@ export default defineConfig({
   routes: [
     {
       path: '/',
+      component: '@/pages/firstPage/index',
+      title: '欢迎！',
+    },
+    {
+      path: '/homepage',
       component: '@/pages/PageModule/HomePage/index',
       title: '首页',
     },
@@ -34,15 +39,14 @@ export default defineConfig({
   },
   //如果需要本地浏览，需要注释下面三个history/outputPath/publicPath，如果上传到了github，网络上浏览，就需要
   //路由改成 hash路由
-  history:{type:"hash"},
+  history: { type: 'hash' },
   //umi的打包路径需要修改，因为gh-pages默认发布build文件下的内容，而umi默认打包目录是dist
   outputPath: 'build',
-  //静态资源访问的路径需要改变，如果想本机打开index.html能直接访问，就改成'./'  如果发布到github/gitee上,直接改成发布的网址，要以 / 结尾
-  publicPath:"https://Shei04.github.io/",
+  //静态资源访问的路径需要改变，如果想本机打开index.html能直接访问，就改成'./'  如果发布到github/gitee上,直接改成发布的网址，要以 / 结尾 https://Shei04.github.io/
+  publicPath: './',
   //在一些场景中，无法做服务端的 html fallback，即让每个路由都输出 index.html 的内容，那么就要做静态化  执行 umi build，会为每个路由输出一个 html 文件
   // exportStatic: {},
 
-  
   //还没弄懂一下内容这里
   // exact: false, path: '/', component: '@/layouts/HomeLayout',
   /*

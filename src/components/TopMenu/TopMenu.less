@@ -1,74 +1,73 @@
 * {
-  margin : 0;
+  margin: 0;
   padding: 0;
-
 }
 
-//滚动顶部导航栏  
+//滚动顶部导航栏
 .first-layer2 {
   user-select: none;
-  width      : 100%;
-  height                  : 4.5rem;
-  transition              : all 0.6s;
-  position                : relative;
+  width: 100%;
+  height: 4.5rem;
+  transition: all 0.6s;
+  position: relative;
   // top                  : 0;
   // backdrop-filter: blur(50px);
-  background-color        : rgba(255, 255, 255, 0.896);
+  background-color: rgba(255, 255, 255, 0.896);
   // z-index              : 999;
-  box-shadow              : rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
   .second-layer {
-    transform          : translate(-15px);
-    height             : 100%;
-    width              : auto;
-    // max-width: 1280px;
-    margin             : auto;
+    transform: translate(-15px);
+    height: 100%;
+    width: auto;
+    max-width: 1280px;
+    margin: auto;
     // background-color: bisque;
-    display            : flex;
-    align-items        : center;
-    justify-content    : space-evenly;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
     .Title-sl {
       font-size: 26px;
     }
 
     .Top-Options {
-      width              : 50%;
-      height             : 85%;
-      display            : flex;
-      align-items        : center;
+      width: 50%;
+      height: 85%;
+      display: flex;
+      align-items: center;
       // background-color: aqua;
-      justify-content    : space-evenly;
+      justify-content: space-evenly;
 
-      >span {
+      > span {
         font-size: 17px;
       }
 
       .Top-btn {
-        cursor         : pointer;
-        width          : 150px;
-        height         : 60px;
-        display        : flex;
-        flex-direction : column;
+        cursor: pointer;
+        width: 150px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items    : center;
-        transition     : all 0.7s;
-        
-        >span {
-          font-size  : 19px;
-          transition : all 0.1s;
+        align-items: center;
+        transition: all 0.7s;
+
+        > span {
+          font-size: 19px;
+          transition: all 0.1s;
           font-weight: bold;
         }
       }
 
       &:hover .Top-btn {
         opacity: 0.2;
-        filter : blur(2px);
+        filter: blur(2px);
       }
 
       .Top-btn:hover {
         opacity: 1;
-        filter : blur(0px);
+        filter: blur(0px);
       }
 
       //按钮特效
@@ -124,10 +123,8 @@
       //     }
       // }
     }
-
   }
 }
-
 
 /* 定义动画  水波加载 弃用 */
 @keyframes animate {

@@ -8,7 +8,7 @@ import './index.less';
 
 // 组件
 import TopMenu from '@/components/TopMenu/TopMenu';
-import ContentBody from '@/components/ContentBody/index'
+import ContentBody from '@/components/ContentBody/index';
 // animatecss动画库  npm i animate.css
 import 'animate.css';
 // wow扩展插件库  npm install wowjs
@@ -34,9 +34,9 @@ const index: React.FC<any> = () => {
     live: true, // 是否异步加载内容 (默认为 true)
   });
   wow.init();
-  useEffect(()=>{
-    console.log("进入程序");
-    
+  useEffect(() => {
+    console.log('进入程序');
+
     // const typed = new Typed(el.current, {
     //   strings: ["小美女", "大美女", "大聪明"],
     //   typeSpeed: 100,
@@ -47,24 +47,21 @@ const index: React.FC<any> = () => {
     // return () => {
     //   typed.destroy();
     // };
-  },[])
-  
+  }, []);
+
   return (
     <div className="pagebody">
       {/* 顶部导航栏 */}
       <div>
         <TopMenu />
       </div>
-      <div  className='topHeight'></div>
       {/* 介绍模块 */}
       <div>
         <ContentBody />
       </div>
-    
-     
-
-
-
+      {/* <div className='beian'>
+        备案文字
+      </div> */}
     </div>
   );
 };
