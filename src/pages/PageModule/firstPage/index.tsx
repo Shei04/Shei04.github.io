@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './index.less';
-import '@/components/TX/test';
+// import '@/components/TX/yh1';
 import bgi from '@/assets/cool-background.png';
 import headphoto from '@/assets/headPhoto.png';
 import { useModel, history } from 'umi';
-const firstpage: React.FC<any> = () => {
+const firstpage: React.FC<any> = (props: any) => {
   useEffect(() => {
     console.log('进入程序');
   }, []);
@@ -20,7 +20,10 @@ const firstpage: React.FC<any> = () => {
           <div className="fp_contentBox">
             <div className="fp_cb">
               <div className="fp_headphoto">
-                {/* <img src="" alt="头像" className='touxiang' /> */}
+                <div
+                  className="touxiang"
+                  style={{ backgroundImage: `url(${headphoto})` }}
+                ></div>
               </div>
               <div className="xian"></div>
               <div className="fp_text_content">

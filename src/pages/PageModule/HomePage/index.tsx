@@ -7,8 +7,8 @@ import './index.less';
 // import '@/components/TX/yh1.js'
 
 // 组件
-import TopMenu from '@/components/TopMenu/TopMenu';
-import ContentBody from '@/components/ContentBody/index';
+import TopMenu from '@/pages/PageComponents/TopMenu/TopMenu';
+import ContentBody from '@/pages/PageModule/ContentBody/index';
 // animatecss动画库  npm i animate.css
 import 'animate.css';
 // wow扩展插件库  npm install wowjs
@@ -34,6 +34,7 @@ const index: React.FC<any> = () => {
     live: true, // 是否异步加载内容 (默认为 true)
   });
   wow.init();
+  const pagestate = 'homepage';
   useEffect(() => {
     console.log('进入程序');
 
@@ -53,12 +54,13 @@ const index: React.FC<any> = () => {
     <div className="pagebody">
       {/* 顶部导航栏 */}
       <div>
-        <TopMenu />
+        <TopMenu showtab="shouye" />
       </div>
       {/* 介绍模块 */}
       <div>
         <ContentBody />
       </div>
+
       {/* <div className='beian'>
         备案文字
       </div> */}

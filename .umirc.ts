@@ -12,7 +12,7 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      component: '@/pages/firstPage/index',
+      component: '@/pages/PageModule/firstPage/index',
       title: '欢迎！',
     },
     {
@@ -21,9 +21,9 @@ export default defineConfig({
       title: '首页',
     },
     {
-      path: '/geren',
-      component: '@/pages/PageModule/HomePage/index',
-      title: '首页',
+      path: '/myproject',
+      component: '@/pages/PageModule/portfolio/index',
+      title: '作品',
     },
   ],
   // 配置 主题 ：修改 Less 变量
