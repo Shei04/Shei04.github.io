@@ -49,7 +49,10 @@ const index: React.FC<any> = () => {
     //   typed.destroy();
     // };
   }, []);
-
+  //禁止右键
+  document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
   return (
     <div className="pagebody">
       {/* 顶部导航栏 */}

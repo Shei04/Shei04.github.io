@@ -7,7 +7,6 @@ import 'animate.css';
 
 const TopMenu: React.FC<any> = (props: any) => {
   const { showtab } = props;
-  console.log(showtab);
   // 小细节
   const showTab = (showtab: any) => {
     switch (showtab) {
@@ -58,7 +57,7 @@ const TopMenu: React.FC<any> = (props: any) => {
           <div
             className={showtab == 'wenzhang' ? 'Top-btn2' : 'Top-btn'}
             onClick={() => {
-              alert('点击了文章');
+              history.push('/article?key=all');
             }}
           >
             <span>文章</span>

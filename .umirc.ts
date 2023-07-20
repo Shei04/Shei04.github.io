@@ -25,6 +25,11 @@ export default defineConfig({
       component: '@/pages/PageModule/portfolio/index',
       title: '作品',
     },
+    {
+      path: '/article',
+      component: '@/pages/PageModule/article/index',
+      title: '文章',
+    },
   ],
   // 配置 主题 ：修改 Less 变量
   // 因为umijs 集成了ant.design ui框架 使用到了Less 预编译 这里可以进行修改整体风格主题或者对应的Less变量值
