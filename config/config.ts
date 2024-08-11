@@ -9,7 +9,7 @@ const { REACT_APP_ENV = 'dev' } = process.env;
 
 export default defineConfig({
   // 配置浏览器tab标签栏名称
-  title:'小沈爱学习',
+  title: '小沈爱学习',
   //配置网页Logo
   /**
    * @name 开启 hash 模式
@@ -84,7 +84,7 @@ export default defineConfig({
   //   locale: false,
   //   ...defaultSettings,
   // },
-  layout:false,
+  layout: false,
   /**
    * @name moment2dayjs 插件
    * @description 将项目中的 moment 替换为 dayjs
@@ -117,6 +117,9 @@ export default defineConfig({
    * @doc https://umijs.org/docs/max/request
    */
   request: {},
+  plugins: [
+    "@umijs/plugins/dist/request"
+  ],
   /**
    * @name 权限插件
    * @description 基于 initialState 的权限插件，必须先打开 initialState
