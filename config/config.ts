@@ -118,7 +118,9 @@ export default defineConfig({
    */
   request: {},
   plugins: [
-    "@umijs/plugins/dist/request"
+    "@umijs/plugins/dist/initial-state",
+    "umijs/plugins/dist/model",
+    "@umijs/plugins/dist/request",
   ],
   /**
    * @name 权限插件
