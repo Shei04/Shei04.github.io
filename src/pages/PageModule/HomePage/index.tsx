@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 //导入css文件
 import './index.less';
 //鼠标点击特效
-// import '@/components/TX/test.js'
+import '@/components/TX/test.js'
 //樱花特效
 // import '@/components/TX/yh1.js'
 
@@ -14,7 +14,7 @@ import 'animate.css';
 // wow扩展插件库  npm install wowjs
 // Typed拓展插件 可以实现打字机效果
 import { WOW } from 'wowjs';
-import Typed from 'typed.js';
+// import Typed from 'typed.js';
 const index: React.FC<any> = () => {
   // const el = React.useRef(null);
   // const testCss: React.CSSProperties = {
