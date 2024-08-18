@@ -6,6 +6,13 @@ import '@/components/TX/test.js'
 //樱花特效
 // import '@/components/TX/yh1.js'
 
+//鼠标拖尾 
+import '@/components/TX/mouse-trail.js'
+
+// 鼠标指针样式修改
+// import '@/components/TX/pointer.js'
+// import '@/components/TX/pointer.css'
+
 // 组件
 import TopMenu from '@/pages/PageComponents/TopMenu/TopMenu';
 import ContentBody from '@/pages/PageModule/ContentBody/index';
